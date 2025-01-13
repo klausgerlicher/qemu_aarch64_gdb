@@ -1,0 +1,13 @@
+#! /bin/bash
+export proxy="http://proxy-dmz.intel.com:912"
+export PROXY="http://proxy-dmz.intel.com:912"
+export http_proxy="http://proxy-dmz.intel.com:912"
+export HTTP_PROXY="http://proxy-dmz.intel.com:912"
+export https_proxy="http://proxy-dmz.intel.com:912"
+export HTTPS_PROXY="http://proxy-dmz.intel.com:912"
+export socks_proxy="http://proxy-dmz.intel.com:1080"
+export SOCKS_PROXY="http://proxy-dmz.intel.com:1080"
+export ftp_proxy="http://proxy-dmz.intel.com:21"
+export FTP_PROXY="http://proxy-dmz.intel.com:21"
+export no_proxy="localhost,127.0.0.1,intel.com,.intel.com"
+export NO_PROXY="localhost,127.0.0.1,intel.com,.intel.com"

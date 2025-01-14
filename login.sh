@@ -5,7 +5,7 @@ source $_SCRIPT_DIR/config.sh
 
 function do_ssh()
 {
- sshpass -p $_PASSWORD ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -v -p 5555 -t ubuntu@localhost $1
+ sshpass -p $_PASSWORD ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -p 5555 -t ubuntu@localhost $1
 }
 
 do_ssh

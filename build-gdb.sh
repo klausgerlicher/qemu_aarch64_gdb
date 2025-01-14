@@ -18,6 +18,7 @@ $_GDB_SRC_DIR/configure \
    --disable-gas \
    --disable-gprof \
    --disable-elfcpp \
+   --disable-sim \
    --with-python=python3 \
    --with-additional-debug-dirs=/usr/lib/debug
    # Build (this takes a while)

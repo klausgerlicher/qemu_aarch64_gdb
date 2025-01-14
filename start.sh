@@ -18,5 +18,5 @@ pushd $_EXEC_DIR
          -netdev user,id=net0,hostfwd=tcp::5555-:22 \
          -pflash flash0.img \
          -pflash flash1.img \
-         -vnc :0 -monitor stdio
+         -nographic
 popd

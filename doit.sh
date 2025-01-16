@@ -6,7 +6,7 @@ source $_SCRIPT_DIR/config.sh
 # jettison everything
 sudo rm -rf $_QEMU_VERSION build install exec $_SOURCE_CODE
 
-sudo apt-get install -y ninja-build zlib1g zlib1g-dev libglib2.0-dev libpixman-1-dev
+sudo apt-get install -y ninja-build zlib1g zlib1g-dev libglib2.0-dev libpixman-1-dev python3-tomli
 sudo apt-get install -y libslirp-dev cloud-image-utils libguestfs-tools sshpass libaio-dev
 
 # get qemu source
@@ -36,9 +36,6 @@ pushd $_EXEC_DIR
     # throw away any previous image
     rm $_IMG || true
     wget -O $_IMG $_CLOUD_IMG
-
-    # get EFI firmware from qemu-system package
-    cp /usr/share/qemu-efi-aarch64/QEMU_EFI.fd QEMU_EFI.fd
 
     # make EFI and variable store images
     dd if=/dev/zero of=flash1.img bs=1M count=64

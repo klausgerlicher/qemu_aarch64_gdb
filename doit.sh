@@ -40,7 +40,7 @@ pushd $_EXEC_DIR
     # make EFI and variable store images
     dd if=/dev/zero of=flash1.img bs=1M count=64
     dd if=/dev/zero of=flash0.img bs=1M count=64
-    dd if=QEMU_EFI.fd of=flash0.img conv=notrunc
+    dd if=$_SCRIPT_DIR/QEMU_EFI.fd of=flash0.img conv=notrunc
 
     # make cloud config
     cat >user-data.yaml <<EOF

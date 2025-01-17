@@ -3,6 +3,20 @@ set -e
 _SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 source $_SCRIPT_DIR/config.sh
 
+# options
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -d|--deamonize)
+      _DAEMONIZE="-daemonize"
+      shift # past argument
+      ;;
+    -*|--*)
+      echo "Unknown option $1"
+      exit 1
+      ;;
+  esac
+done
+
 pushd $_EXEC_DIR
      $_INST_DIR/bin/qemu-system-aarch64 \
          -smp $(( $(nproc) / 2 )) \
@@ -18,5 +32,5 @@ pushd $_EXEC_DIR
          -netdev user,id=net0,hostfwd=tcp::5555-:22 \
          -pflash flash0.img \
          -pflash flash1.img \
-         -nographic
+	 $_DAEMONIZE
 popd

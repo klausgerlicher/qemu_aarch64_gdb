@@ -7,7 +7,7 @@ source $_SCRIPT_DIR/config.sh
 sudo rm -rf $_QEMU_VERSION build install exec $_SOURCE_CODE
 
 sudo apt-get install -y ninja-build zlib1g zlib1g-dev libglib2.0-dev libpixman-1-dev python3-tomli
-sudo apt-get install -y libslirp-dev cloud-image-utils libguestfs-tools sshpass libaio-dev
+sudo apt-get install -y libslirp-dev cloud-image-utils libguestfs-tools sshpass libaio-dev python3 python3-venv
 
 # get qemu source
 _QEMU_DOWNLOAD_URL=https://download.qemu.org

@@ -3,6 +3,12 @@
 Script set to create a QEMU aarch64 VM including a ready built GDB. This is for
 GDB internal purposes.
 
+# NOTE
+
+Get a fast machine to run this since the aarch64 machine is fully SW emulated. It's currently the only way to support for
+ARM SIMD features like SVE and SME. I used a last gen Intel
+for this. QEMU emulation will use half of the cores of the host machine.
+
 # How to use
 
 1) Run doit.sh. This will compile QEMU 9.x from scratch create a Qemu VM from an

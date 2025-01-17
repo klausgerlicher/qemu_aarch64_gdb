@@ -92,4 +92,4 @@ COPY *.sh /
 
 ENV _IMG=$_EXEC_DIR/cloud.img
 
-CMD ["./start.sh", "./setup.sh"] 
+CMD ./start.sh -d; ./setup.sh 

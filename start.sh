@@ -6,7 +6,7 @@ source $_SCRIPT_DIR/config.sh
 # options
 while [[ $# -gt 0 ]]; do
   case $1 in
-    -d|--deamonize)
+    -d|--daemonize)
       _DAEMONIZE="-daemonize"
       shift # past argument
       ;;

@@ -95,4 +95,4 @@ ENV _IMG=$_EXEC_DIR/cloud.img
 
 COPY arm_apps /
 
-CMD ./start.sh -d; ./setup.sh 
+CMD ./start.sh -d; ./setup.sh; ./login.sh 

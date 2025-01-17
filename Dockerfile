@@ -89,6 +89,7 @@ RUN rm $_EXEC_DIR/$_IMG || true
 RUN $_INST_DIR/bin/qemu-img resize $_EXEC_DIR/$_IMG.qcow2 +15G
 
 COPY *.sh /
+COPY proxies /
 
 ENV _IMG=$_EXEC_DIR/cloud.img
 

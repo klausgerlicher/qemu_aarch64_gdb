@@ -93,4 +93,6 @@ COPY proxies /
 
 ENV _IMG=$_EXEC_DIR/cloud.img
 
+COPY arm_apps /
+
 CMD ./start.sh -d; ./setup.sh 

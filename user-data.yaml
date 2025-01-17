@@ -1,0 +1,4 @@
+#cloud-config
+password: Quark128
+chpasswd: { expire: False }
+ssh_pwauth: True
